@@ -1,0 +1,36 @@
+nav {
+    background: #1d2c38;
+    color: white;
+    text-align: center;
+    width: 100%;
+    box-shadow: $shadow-0;
+}
+
+
+#menu {
+    li {
+        padding: 10px 20px;
+        &:hover {
+            background: #4caf50;
+            cursor: pointer;
+        }
+    }
+}
+
+#subMenu {
+    background: #4caf50;
+    li {
+        padding: 10px 20px;
+        &:hover {
+            background: rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+    }
+}
+
+
+.nav {
+    &__top {
+        padding: 10px 20px;
+    }
+}

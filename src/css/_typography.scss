@@ -1,0 +1,239 @@
+// Circular font
+@font-face {
+    font-family: 'Circular Std';
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-1601bfce1c9652eb33ea807d817a30dd.eot");
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-1601bfce1c9652eb33ea807d817a30dd.eot?#") format("eot"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-f016908d84431f0566776240dc8652fc.woff2") format("woff2"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-a81fe8415c30ad3049cfb08d3623587d.woff") format("woff"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-43e1d462e585f16e90b5d27423fc5d8b.svg") format("svg");
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    font-style: normal
+}
+@font-face {
+    font-family: 'Circular Std';
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-35e1cf57d93dc4eb3db11cc2448cb91f.eot");
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-35e1cf57d93dc4eb3db11cc2448cb91f.eot?#") format("eot"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-4909b413294f9048153d6dee23438b24.woff2") format("woff2"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-1db902f5b85bbb0964e2994434edbe16.woff") format("woff"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-0d9eb203b260869dc2470ae35162fc1e.svg") format("svg");
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    font-style: italic
+}
+@font-face {
+    font-family: 'Circular Std';
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-44d43ca7b4c3bf5364285df6282fbe52.eot");
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-44d43ca7b4c3bf5364285df6282fbe52.eot?#") format("eot"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-c6b068854263ae24ccc36a2b944d7017.woff2") format("woff2"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-0dba9a8cc666f696e92eff76a5d753f1.woff") format("woff"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-9ae13155a0bad6697556e3713a89795b.svg") format("svg");
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    font-style: normal
+}
+@font-face {
+    font-family: 'Circular Std';
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-c4695b2827a2478e391c155781777f66.eot");
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-c4695b2827a2478e391c155781777f66.eot?#") format("eot"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-328fc4c742a91de3477978911e384410.woff2") format("woff2"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-f76c67e53b97895a8f31fc8f0246ab7f.woff") format("woff"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-d1ee89419dc527be163d0151af5b087e.svg") format("svg");
+    font-weight: 200;
+    text-rendering: optimizeLegibility;
+    font-style: normal;
+}@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+html {
+   font-family: 'Circular Std', sans-serif;
+   color: rgba(0,0,0,0.75);
+}
+
+
+h1,h2,h3,h4,h5,p,q {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $dark-grey;
+    display: inline-block;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+q, .quote {
+    font-family: 'Merriweather', serif;
+    display: block;
+    font-size: 18px;
+
+    &:before {
+        content: '"';
+    }
+    &:after {
+        content: '"';
+    }
+}
+q {
+    margin: 2em 0 .5em 0;
+    line-height: 1.6;
+    border-left: 2px solid #207ABF;
+    padding: 16px 16px;
+    background: rgba(32, 122, 191, 0.1);
+}
+h1 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+    margin-bottom: 22px;
+    font-weight: 500;
+}
+h2 {
+    font-size: 36px;
+    line-height: 1.333;
+    letter-spacing: -1.25px;
+    font-weight: 500;
+}
+h3 {
+    font-size: 28px;
+    line-height: 1.375;
+    letter-spacing: -1px;
+    font-weight: 500;
+}
+h4 {
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: -.25px;
+    font-weight: 400;
+}
+h5 {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: -.25px;
+    font-weight: 400;
+}
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    margin-top: 0;
+    letter-spacing: -.25px;
+    color: $light-grey;
+    opacity: 0.87;
+    @include on(mobile){
+        font-size: 16px;
+    }
+}
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Blog posts
+header {
+    margin: 0 0 2em 0;
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        opacity: 0.54;
+    }
+}
+
+
+
+.txt {
+    &--center {
+        display: block;
+        text-align: center;
+    }
+    &--nowrap {
+        white-space: nowrap;
+    }
+    &-r {
+        display: block;
+        text-align: right;
+    }
+    &--white {
+        color: white;
+    }
+    &--dark-grey {
+        color: #404758 !important;
+    }
+    &--light-grey {
+        color: #626677 !important;
+    }
+    &--hint {
+        opacity: 0.62;
+    }
+    &--alert {
+        color: md(Red);
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        &:before {
+            font-family: 'Dripicons-v2';
+            content: '';
+            font-size: 1.2em;
+            margin-right: 0.62em;
+            line-height: 1;
+        }
+    }
+    &--xsmall, &--small {
+        line-height: 1.8;
+        margin-bottom: 20px;
+        margin-top: 0;
+        letter-spacing: -.25px;
+    }
+    &--xsmall {
+        font-size: 14px;
+    }
+    &--small {
+        font-size: 15px;
+    }
+    &--large {
+        font-size: 18px;
+    }
+    &--xlarge {
+        font-size: 22px;
+    }
+}
+
+.no-margin {
+    margin: 0;
+}
+
+// ICONS
+i {
+    font-size: 24px;
+    font-style: normal;
+    display: inline-block;
+
+    &.icon-S {
+        font-size: 18px;
+    }
+    &.icon-M {
+        font-size: 32px;
+    }
+    &.icon-L {
+        font-size: 48px;
+    }
+    &.icon-XL {
+        font-size: 64px;
+    }
+}
+
+
+
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+}
