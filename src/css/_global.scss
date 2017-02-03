@@ -1,10 +1,15 @@
+* {
+    box-sizing: border-box;
+}
 body, html {
-    background: #f1f1f1;
+    background: $grey;
     width: 100%;
+    max-width: 1920px;
+    margin: auto;
     height: 100vh;
     overflow: hidden;
+    box-shadow: $shadow-1;
 }
-
 
 table {
     background: white;
@@ -17,14 +22,24 @@ table {
         padding: 16px 20px;
         border-bottom: 1px solid rgba(0,0,0,0.062);
         &:first-child {
-            padding-left: 50px;
+            padding-left: 30px;
         }
         &:last-child {
-            padding-right: 50px;
+            padding-right: 30px;
         }
     }
     td {
 
+    }
+    tr {
+        &:hover {
+            background: rgba(0,0,0,0.06) !important;
+            cursor: pointer;
+        }
+        &.selected {
+            background: $green !important;
+            color: white !important;
+        }
     }
     tr {
         &:nth-child(2n) {
@@ -40,11 +55,6 @@ table {
     }
 }
 
-.card {
-    background: white;
-    padding: 40px 20px;
-}
-
 
 
 .list--horizontal {
@@ -57,8 +67,6 @@ table {
     }
 }
 
-
-
 .search {
     background: white;
     border: 1px solid #d9d9d9;
@@ -68,4 +76,56 @@ table {
         padding: 12px 20px;
         font-size: 22px;
     }
+}
+
+
+
+input {
+    background: white;
+    border: $border;
+    width: 100%;
+    transition: box-shadow $transition;
+
+    &:focus {
+        outline: 0;
+        box-shadow: $shadow-2;
+        border-color: white;
+        border-bottom: 2px solid $green;
+    }
+}
+
+
+
+
+.search {
+    &__tag {
+        padding: 0.5em 1em;
+        background: none;
+        display: inline-block;
+        border-radius: 5px;
+        cursor: pointer;
+        user-select: none;
+        margin: 0 .5em .5em 0;
+        font-weight: bold;
+        font-size: 14px;
+
+        &:hover {
+            background: $grey;
+        }
+        &--selected {
+            display: flex;
+            margin-bottom: 10px;
+            &__name {
+                background: $blue;
+                color: white;
+                padding: 0.75em 1em;
+            }
+            input {
+                border: 2px solid $blue;
+                border-left: 0;
+                padding: 0 1em;
+            }
+        }
+    }
+
 }
