@@ -130,18 +130,6 @@ a {
     }
 }
 
-// Blog posts
-header {
-    margin: 0 0 2em 0;
-    padding-bottom: 1em;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    p {
-        font-size: 18px;
-        font-weight: 400;
-        opacity: 0.54;
-    }
-}
-
 
 
 .txt {
@@ -236,4 +224,20 @@ i {
     white-space: nowrap;
     text-decoration: none;
     text-align: center;
+}
+
+
+.icon {
+    &--txt {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 1em;
+
+        &:before {
+            margin-right: .5em;
+        }
+    }
+    &--small {
+        font-size: 18px;
+    }
 }

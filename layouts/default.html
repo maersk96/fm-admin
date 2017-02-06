@@ -2,39 +2,57 @@
 
 
     {{> header}}
+<!--
+<nav class='nav'>
+    <ul class='txt--small'>
+        <li class='txt--xlarge'>Kunder</li>
+        <li>Alle</li>
+        <li>Nye</li>
+        <li>Mislykkede logins</li>
+        <li>Opret kunde</li>
+    </ul>
+</nav>-->
 
-<div class='row row--full-height'>
-    <nav class='nav col-1'>
-        <div class='nav__location'>
-            Kunder
+<div class='row row--inverse row--full-height'>
+    <header class='row'>
+        <div class='col-2 col--center no-border'>
+            <h4 class='dripicons-menu no-margin icon--txt'>Mislykkede logins</h4>
         </div>
-        <ul class='txt--small'>
-            <li>Alle</li>
-            <li>Nye</li>
-            <li>Mislykkede logins</li>
-            <li>Opret kunde</li>
-        </ul>
-    </nav>
-    <div class='row bg--white'>
+        <div class='col-8 no-border'>
+            <div class='search'>
+                <label for='search'><i class='dripicons-search icon--txt icon--small'>Søg:</i></label>
+                <div class='search__labels'>
+                    <div class='search__label'>name:</div>
+                    <input id='search' type='text' >
+                </div>
+            </div>
+        </div>
+        <div class='col-2 col--center col--right no-border'>
+            <i class='dripicons-gear icon--txt icon--small'>Indstillinger</i>
+            <i class='dripicons-exit icon--txt icon--small'>Log ud</i>
+        </div>
+    </header>
+    <div class='row bg--white row--full-height'>
         <div class='col-2'>
-            <h4>Søg i tabel</h4>
+            <h4>Søg</h4>
             <div class='search__tag--selected'><div class='search__tag--selected__name'>name:</div><input type='text'></div>
             <div class='search__tag--selected'><div class='search__tag--selected__name'>registerDate:</div><input type='text'></div>
-            <div class='row--inner'>
-                <div class='search__tag'>name:</div>
-                <div class='search__tag'>from:</div>
-                <div class='search__tag'>to:</div>
-                <div class='search__tag'>id:</div>
-                <div class='search__tag'>registerDate:</div>
-                <div class='search__tag'>address:</div>
-                <div class='search__tag'>positions:</div>
-            </div>
 
-            <div class='block'>
-                <h4>Kolonner</h4>
-            </div>
+
+            <div class='search__tag'>name:</div>
+            <div class='search__tag'>from:</div>
+            <div class='search__tag'>to:</div>
+            <div class='search__tag'>id:</div>
+            <div class='search__tag'>registerDate:</div>
+            <div class='search__tag'>address:</div>
+            <div class='search__tag'>positions:</div>
+
+            <div class='divider--hzt'></div>
+
+            <h4>Kolonner</h4>
+
         </div>
-        <div class='no-overflow--scroll col--fill no-pad'>
+        <div class='overflow--scroll col-8 no-pad'>
             <table class='table--large'>
                 <tr class='thead'>
             		<th>Name</th>
@@ -189,7 +207,7 @@
             </table>
         </div>
         <div class='col-2'>
-            <h4><b>1</b> kunde valgt</h4>
+            <h4><b>1</b> valgt</h4>
             <h2>Brielle Williamson</h2>
             <div class='row--inner'>
                 <

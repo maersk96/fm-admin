@@ -1,0 +1,24 @@
+::-webkit-scrollbar              {
+    background: $grey;
+    border-left: $border;
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-button       {
+    display: none;
+}
+::-webkit-scrollbar-track        {
+
+}
+::-webkit-scrollbar-track-piece  {
+
+}
+::-webkit-scrollbar-thumb        {
+    background: rgba(0,0,0,0.2);
+    border-top: $border;
+    border-bottom: $border;
+}
+::-webkit-scrollbar-corner       {
+    background: $grey-darker;
+}
+::-webkit-resizer                { /* 7 */ }

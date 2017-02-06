@@ -14,13 +14,12 @@ body, html {
 table {
     background: white;
     width: 100%;
-    height: 500px;
-    overflow: scroll;
     border-collapse: collapse;
+    white-space: nowrap;
 
     td, th {
         padding: 16px 20px;
-        border-bottom: 1px solid rgba(0,0,0,0.062);
+        border-bottom: 1px solid rgba(0,0,0,0.06);
         &:first-child {
             padding-left: 30px;
         }
@@ -29,7 +28,9 @@ table {
         }
     }
     td {
-
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     tr {
         &:hover {
@@ -48,10 +49,12 @@ table {
     }
 }
 
-.no-overflow {
-    overflow: hidden;
+.overflow {
+    &--none {
+        overflow: hidden;
+    }
     &--scroll {
-        overflow: scroll;
+        overflow: auto;
     }
 }
 
@@ -90,10 +93,24 @@ input {
         outline: 0;
         box-shadow: $shadow-2;
         border-color: white;
-        border-bottom: 2px solid $green;
     }
 }
 
+
+.divider {
+    &--hzt {
+        width: 100%;
+        background: $grey-darker;
+        height: 1px;
+        margin: 40px 0;
+    }
+    &--vrt {
+        height: 100%;
+        background: $grey-darker;
+        width: 1px;
+        margin: 0 30px;
+    }
+}
 
 
 
@@ -128,4 +145,17 @@ input {
         }
     }
 
+}
+.expanded {
+    transition: all $transition;
+    width: 320px;
+    position: fixed;
+    right: 0;
+    background: white;
+    &:hover {
+        position: fixed;
+        width: 1200px;
+        box-shadow: 10px 10px 100px rgba(0,0,0,0.1);
+
+    }
 }

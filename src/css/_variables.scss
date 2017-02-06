@@ -18,10 +18,10 @@ $blue: #1e88e5;
 $green: #4caf50;
 
 $grey-lighter: #f5f5f5;
-$grey: #f1f1f1;
-$grey-darker: #eee;
+$grey: #fafafa;
+$grey-darker: #ebebeb;
 
-$border: 1px solid rgba(0,0,0,0.1);
+$border: 1px solid $grey-darker;
 
 @mixin on($device) {
     @if $device == tablet {
