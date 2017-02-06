@@ -38,6 +38,12 @@
 
 
 
+$txt-size-normal: 14px;
+$txt-size-medium: 18px;
+$txt-size-large: 22px;
+$txt-size-xlarge: 28px;
+$txt-size-xxlarge: 36px;
+
 
 
 html {
@@ -53,32 +59,14 @@ h1,h2,h3,h4,h5,p,q {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: $dark-grey;
+    color: $grey-darker-blue;
     display: inline-block;
     width: 100%;
     margin-top: 0;
     margin-bottom: 20px;
 }
 
-q, .quote {
-    font-family: 'Merriweather', serif;
-    display: block;
-    font-size: 18px;
 
-    &:before {
-        content: '"';
-    }
-    &:after {
-        content: '"';
-    }
-}
-q {
-    margin: 2em 0 .5em 0;
-    line-height: 1.6;
-    border-left: 2px solid #207ABF;
-    padding: 16px 16px;
-    background: rgba(32, 122, 191, 0.1);
-}
 h1 {
     font-size: 40px;
     letter-spacing: -1.5px;
@@ -86,36 +74,36 @@ h1 {
     font-weight: 500;
 }
 h2 {
-    font-size: 36px;
+    font-size: $txt-size-xxlarge;
     line-height: 1.333;
     letter-spacing: -1.25px;
     font-weight: 500;
 }
 h3 {
-    font-size: 28px;
+    font-size: $txt-size-xlarge;
     line-height: 1.375;
     letter-spacing: -1px;
     font-weight: 500;
 }
 h4 {
-    font-size: 22px;
+    font-size: $txt-size-large;
     line-height: 1.5;
     letter-spacing: -.25px;
     font-weight: 400;
 }
 h5 {
-    font-size: 18px;
+    font-size: $txt-size-medium;
     line-height: 1.5;
     letter-spacing: -.25px;
     font-weight: 400;
 }
 p {
-    font-size: 18px;
+    font-size: $txt-size-medium;
     line-height: 1.8;
     margin-bottom: 20px;
     margin-top: 0;
     letter-spacing: -.25px;
-    color: $light-grey;
+    color: $grey-lighter-blue;
     opacity: 0.87;
     @include on(mobile){
         font-size: 16px;

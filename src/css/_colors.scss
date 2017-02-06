@@ -1,6 +1,6 @@
 .bg {
     &--grey { background-color: $grey !important; }
-}
-.bg {
     &--white { background-color: white !important; }
+    &--green { background-color: $green !important; }
+    &--blue { background-color: $blue !important; }
 }

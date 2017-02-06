@@ -8,6 +8,16 @@
         opacity: 1;
     }
 }
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes wiggle {
+    0%,100% { transform: translateX(0); }
+    25%,75% { transform: translateX(.3em); }
+    50% { transform: translateX(-.3em); }
+}
+
 .animate {
     &--delay-1 {
         animation-delay: 0.1s !important;
@@ -19,5 +29,8 @@
         animation-fill-mode: forwards;
         -webkit-font-smoothing: antialiased;
         -webkit-backface-visibility: hidden;
+    }
+    &__wiggle {
+        animation: wiggle 0.4s $timing;
     }
 }

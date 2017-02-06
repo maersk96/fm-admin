@@ -30,6 +30,9 @@
     &--inner {
         padding: 20px 0;
     }
+    &--center {
+        align-items: center;
+    }
 }
 
 .col {
@@ -37,20 +40,27 @@
     height: 100%;
     padding: 15px 30px;
     border-right: $border;
+    flex: 1;
+
+    img {
+        width: 100%;
+    }
 
     &:last-child { border-right: 0; }
 
     &--fill {
-        border-right: $border;
+
     }
     &--center {
         display: flex;
         align-items: center;
+        justify-content: center;
     }
     &--right {
+        display: flex;
         justify-content: flex-end;
     }
 }
 @for $i from 1 through 12 {
-    .col-#{$i} { @extend .col; flex: 0 1 ($i * 160px); }
+    .col-#{$i} { @extend .col; flex: ($i) 0; }
 }
