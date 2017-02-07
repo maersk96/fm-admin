@@ -5,6 +5,7 @@ body, html {
     background: $grey;
     width: 100%;
     max-width: 1920px;
+    min-width: 1280px;
     margin: auto;
     height: 100vh;
     overflow: hidden;
@@ -18,8 +19,9 @@ table {
     white-space: nowrap;
 
     td, th {
-        padding: 16px 20px;
+        padding: 16px 8px;
         border-bottom: 1px solid rgba(0,0,0,0.06);
+        text-align: left;
         &:first-child {
             padding-left: 30px;
         }
@@ -34,8 +36,10 @@ table {
     }
     tr {
         &:hover {
-            background: rgba(0,0,0,0.06) !important;
-            cursor: pointer;
+            td {
+                background: rgba(0,0,0,0.06) !important;
+                cursor: pointer;
+            }
         }
         &.selected {
             background: $green !important;
@@ -60,13 +64,15 @@ table {
 
 
 
-.list--horizontal {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    li {
-        display: inline-block;
+.list {
+    &--horizontal {
+        list-style-type: none;
+        padding: 0;
         margin: 0;
+        li {
+            display: inline-block;
+            margin: 0;
+        }
     }
 }
 
@@ -81,18 +87,7 @@ table {
 
 
 
-input {
-    background: white;
-    border: $border;
-    width: 100%;
-    transition: box-shadow $transition;
 
-    &:focus {
-        outline: 0;
-        box-shadow: $shadow-2;
-        border-color: white;
-    }
-}
 
 
 .divider {
@@ -161,32 +156,51 @@ input {
 
 .overlay {
     background: rgba(0,0,0,0.2);
-    position: fixed;
+    position: absolute;
     top:0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 100
+    z-index: 50;
+    opacity: 0;
+    transition: all $transition;
+    pointer-events: none;
+    &--active {
+        opacity: 1;
+        pointer-events: all;
+    }
 }
 
 .popup {
-    min-height: 300px;
-    min-width: 500px;
+    min-height: 100px;
+    width: 500px;
     background: white;
     position: fixed;
     z-index: 101;
-    top: 0;
     padding: 50px 30px;
     box-shadow: $shadow-1;
-
+    transition: all $transition;
+    opacity: 0;
+    pointer-events: none;
+    left: 50%;
+    top: 100px;
+    margin-left: -250px;
+    &.active {
+        top: 250px;
+        opacity: 1;
+        pointer-events: all;
+    }
     &--page {
         width: 1280px;
-        left: 50%;
         margin-left: -640px;
         height: 100%;
+        top: 150px;
         overflow-x: hidden;
         overflow-y: auto;
         max-height: calc(100vh - 0);
+        &.active {
+            top: 0;
+        }
     }
 }
 
@@ -214,4 +228,26 @@ input {
             color: $blue;
         }
     }
+}
+
+
+.clickable {
+    &:hover {
+        background: $grey;
+        cursor: pointer;
+    }
+}
+.rotate-90 {
+    transform: rotate(90deg) scale(1.4);
+    z-index: 1000;
+    box-shadow: 0 0 50px 10px rgba(0,0,0,0.2);
+}
+img {
+    transition: all $transition;
+}
+
+
+a:focus {
+    background: $blue;
+    color: white;
 }

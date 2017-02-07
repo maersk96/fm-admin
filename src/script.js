@@ -1,70 +1,5 @@
 "use strict";
 
-var lastScrollTop = 0,
-    delta = 10,
-    navbarHeight = 84,
-    didScroll,
-    nav = document.getElementById('altNav');
-
-// on scroll, let the interval function know the user has scrolled
-window.onscroll = function() {
-  didScroll = true;
-};
-// run hasScrolled() and reset didScroll status
-setInterval(function() {
-  if (didScroll) {
-    hasScrolled();
-    didScroll = false;
-  }
-}, 250);
-
-function hasScrolled() {
-
-    var st = document.body.scrollTop;
-
-    if (Math.abs(lastScrollTop-st) <= delta)
-        return;
-
-
-    if (st < navbarHeight) {
-        nav.classList.add('nav__attached');
-    } else {
-        nav.classList.remove('nav__attached');
-    }
-
-
-    if (st > lastScrollTop && st > navbarHeight) {
-        // on down scroll && not at the top
-        nav.classList.add('nav__invisible');
-    } else {
-        nav.classList.remove('nav__invisible');
-    }
-
-    lastScrollTop = st;
-}
-
-document.getElementById('nav__mobile-btn').onclick = function(){
-    this.classList.toggle('active');
-    document.getElementById('nav__menu').classList.toggle('active');
-    document.body.classList.toggle('no-scroll');
-    nav.classList.remove('nav__attached');
-};
-
-function dropdown(el, thisEl) {
-    thisEl.classList.toggle('active');
-    document.getElementById(el).classList.toggle('active');
-}
-
-
-
-
-
-
-
-
-
-
-
 
 // PM LOGIN //
 function getHTTPObject() {
@@ -99,3 +34,27 @@ function StrRepl(s)  {
      s0 = s0.replace(/\&/g,'%26')
     return(s0);
  }
+
+
+function toggleExamplePopup() {
+    document.getElementById('popup').classList.add('active');
+    document.getElementById('overlay').classList.add('overlay--active');
+}
+function toggleExamplePopup2() {
+    document.getElementById('popup-2').classList.add('active');
+    document.getElementById('overlay').classList.add('overlay--active');
+}
+function toggleExampleNav() {
+    document.getElementById('nav').classList.toggle('active');
+}
+function closeExamples() {
+    document.getElementById('nav').classList.remove('active');
+    document.getElementById('popup').classList.remove('active');
+    document.getElementById('popup-2').classList.remove('active');
+    document.getElementById('overlay').classList.remove('overlay--active');
+}
+
+
+function rotateImg(elm) {
+    elm.classList.toggle('rotate-90');
+}
